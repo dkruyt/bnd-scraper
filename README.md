@@ -8,10 +8,10 @@ I created this script for personal usage. Use at own risk. I am not RESPONSABLE 
 
 # Install
 
-* Add user Brand New Day credentials in the file. 
-* Add the InfluxDB settings if needed and create in InfluxDB the database.
-* Add the script in a cron job every hour or day.
-* Import the example Grafana dashboard.
+* Add user Brand New Day credentials in the file bnd-scraper.sh. 
+* Add the InfluxDB settings in bnd-scraper.sh and if needed and create in InfluxDB the database.
+* Add the bnd-scraper.sh script in a cron job every hour or day.
+* Import the example Grafana dashboard grafana.json
 
 # Grafana screenshot
 
