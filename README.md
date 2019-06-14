@@ -13,3 +13,8 @@ I created this script for personal usage. Use at own risk. I am not RESPONSABLE 
 * Add the script in a cron job every hour or day.
 * Import the example Grafana dashboard.
 
+# Grafana screenshot
+
+![grafana](https://raw.githubusercontent.com/dkruyt/resources/master/bnd-scraper-grafana.png)
+
+
