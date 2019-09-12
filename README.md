@@ -4,7 +4,7 @@ A shell script that get your stock info from Brand New Day and puts it into Infl
 
 # DISCLAMER
 
-I created this script for personal usage. Use at own risk. I am not RESPONSABLE for any loss of your credentials or loss of funds.
+I created this script for personal usage. Use at own risk. I am NOT RESPONSABLE for any loss of your credentials or loss of funds.
 
 # Install
 

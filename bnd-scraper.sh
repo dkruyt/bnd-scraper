@@ -20,7 +20,7 @@ COOKIE="/tmp/bnd.cookie"
 # Log in and get Cookie
 ${CURL} -k -s -S --max-time 5 -c ${COOKIE} -b ${COOKIE} -d "username=${USERNAME}&password=${PASSWORD}&token=" https://secure.brandnewday.nl/mijn-gegevens/inloggen > /dev/null
 # Get account values in json
-${CURL} -k -s -S --max-time 5 -c ${COOKIE}  -b ${COOKIE}  https://secure.brandnewday.nl/mijn-overzicht/getinvestmentaccountsportfoliovalues | jq -r '.Message' | jq '.' > /tmp/bnd.$$
+${CURL} -k -s -S --max-time 5 -c ${COOKIE}  -b ${COOKIE} https://secure.brandnewday.nl/myoverview/getinvestmentaccountsportfoliovalues | jq -r '.Message' | jq '.' > /tmp/bnd.$$
 
 AccountID=( $(jq '.AccountList[].AccountID' /tmp/bnd.$$) )
 
