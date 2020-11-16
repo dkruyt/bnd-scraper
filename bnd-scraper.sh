@@ -26,7 +26,7 @@ AccountID=( $(jq '.AccountList[].AccountID' /tmp/bnd.$$) )
 
 for i in ${AccountID[@]}
 do
-	AccountDetail=( $( jq -r '.AccountList[] | select(.AccountID == '$i') | .AccountID,.ActionName,.ProductID,.Portfolio.Value' /tmp/bnd.$$) )
+	AccountDetail=( $( jq -r '.AccountList[] | select(.AccountID == '$i') | .AccountID,.ProductTitle,.ProductID,.Portfolio.Value' /tmp/bnd.$$) )
 
 	${CURL} -i -XPOST "${INFLUXHOST}/write?precision=s&db=${INFLUXDB}" --data-binary "bnd,AccountID=${AccountDetail[0]},ActionName=${AccountDetail[1]},ProductID=${AccountDetail[2]} value=${AccountDetail[3]} ${DATE}"
 done
